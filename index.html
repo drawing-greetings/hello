@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="https://cdn.glitch.global/6264d154-a535-43f1-a7e2-e5000f1b5f43/logomini.png?v=1741361058034">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mapping homes</title>
+  <style>
+    @font-face {
+      font-family: HK Grotesk;
+      src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+        format("opentype");
+    }
+    @font-face {
+      font-family: HK Grotesk;
+      font-weight: bold;
+      src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+        format("opentype");
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'HK Grotesk', sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: 5.5em;
+      font-weight: bold;
+      color: #004be3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-family: 'HK Grotesk', sans-serif;
+    }
+
+    .title-text span {
+      color: inherit; /* default color */
+    }
+
+    /* Customize letter colors here */
+    .title-text span:nth-child(1)  { color: bluescience; }
+    .title-text span:nth-child(2)  { color: bluescience; }
+    .title-text span:nth-child(3)  { color: bluescience; }
+    .title-text span:nth-child(4)  { color: bluescience; }
+    .title-text span:nth-child(5)  { color: bluescience; }
+    .title-text span:nth-child(6)  { color: bluescience; }
+    .title-text span:nth-child(7)  { color: bluescience; }
+    .title-text span:nth-child(8)  { color: bluescience; }  /* space */
+    .title-text span:nth-child(9)  { color: bluescience; }
+    .title-text span:nth-child(10) { color: bluescience; }
+    .title-text span:nth-child(11) { color: bluescience; }
+    .title-text span:nth-child(12) { color: bluescience; }
+    .title-text span:nth-child(13) { color: bluescience; }
+
+    .icon {
+      width: 200px;
+      height: 200px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      position: relative;
+    }
+
+    .icon:hover {
+      transform: scale(1.3);
+    }
+
+    .icon:hover::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 0, 170, 0.5);
+      mix-blend-mode: multiply;
+    }
+
+    .maps-icon {
+      margin-top: -60px;
+    }
+
+    .mapping-link {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #fb9041;
+      text-decoration: none;
+      font-family: 'HK Grotesk', sans-serif;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title, .mapping-link {
+        font-size: 3em;
+        gap: 10px;
+      }
+      .icon {
+        width: 150px;
+        height: 150px;
+      }
+      .maps-icon {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .title, .mapping-link {
+        font-size: 2em;
+        gap: 5px;
+      }
+      .icon {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .sparkle {
+      position: absolute;
+      font-size: 1.5rem;
+      color: #FF00AA;
+      pointer-events: none;
+      user-select: none;
+      animation: fadeUp 3s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.5);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">
+      <a href="https://andreaplarivas.glitch.me/">
+        <img src="https://cdn.glitch.global/6264d154-a535-43f1-a7e2-e5000f1b5f43/profile.png?v=1741100733028" alt="Profile" class="icon">
+      </a>
+      <span class="title-text">
+        <span>m</span><span>a</span><span>p</span><span>p</span><span>i</span><span>n</span><span>g</span><span> </span><span>h</span><span>o</span><span>m</span><span>e</span><span>s</span>
+      </span>
+      <a href="https://manifesto-mapping-homes-methods.glitch.me/" target="_blank">
+        <img src="https://cdn.glitch.global/6264d154-a535-43f1-a7e2-e5000f1b5f43/pencilr.png?v=1741081708205" alt="Method" class="icon">
+      </a>
+    </h1>
+    <a href="https://kinopio.club/the-sketchbook-practice-xVBQM1oYj8bLwrK9L523H">
+      <img src="https://cdn.glitch.global/6264d154-a535-43f1-a7e2-e5000f1b5f43/SKETCHBOOK.png?v=1748506571778" alt="" class="icon"></a>
+  </div>
+
+  <script>
+    const symbols = ['✐', '⊹', '࣪', '˖','⊹','࣪','˖'];
+    document.addEventListener('mousemove', (e) => {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = `${e.pageX}px`;
+      sparkle.style.top = `${e.pageY}px`;
+      sparkle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+      document.body.appendChild(sparkle);
+      setTimeout(() => {
+        sparkle.remove();
+      }, 1400);
+    });
+  </script>
+</body>
+</html>
