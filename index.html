@@ -1,180 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="https://cdn.glitch.global/6264d154-a535-43f1-a7e2-e5000f1b5f43/logomini.png?v=1741361058034">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manifesto</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            color: #004be3;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 80vh;
-        }
-        .container {
-            display: flex;
-            width: 90%;
-            max-width: 1200px;
-            gap: 30px;
-            flex-direction: column; /* Stack sections vertically on mobile */
-        }
-        .left-section, .right-section {
-            width: 100%; /* Full width on mobile */
-        }
-        .left-section h1 {
-            font-size: 2.5em;
-            color: #004be3;
-            margin-top: 100px;  
-            margin-bottom: 0px; /* Adjusted to move the title up */
-            text-align: center;
-        }
-        .slideshow-container {
-            width: 100%; /* Full width on mobile */
-            max-width: 500px;
-            position: right;
-            margin-top: 40px; /* Added margin to separate from the title */
-            margin-bottom: 0px;
-            margin-left: 90px;
-        }
-        .slide {
-            display: none;
-            width: 80%; /* Full width on mobile */
-            height: auto;
-        }
-        .materialities-link {
-            font-size: 2em;
-            font-weight: bold;
-            text-decoration: none;
-            color: #FF00AA; /* Changed to bright pink */
-            margin-top: 30px;
-            margin-bottom: 30px;
-            display: block;
-            text-align: center; /* Center text on mobile */
-        }
-        .manifesto-point {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            margin-top: 40px
-        }
-        .manifesto-point .number {
-            font-size: 2em;
-            font-weight: bold;
-            color: #004be3;
-            margin-right: 20px;
-        }
-        .manifesto-point .text {
-            font-size: 1.2em;
-            color: #004be3;
-        }
-        .links-below-text {
-            margin-top: 20px;
-            display: flex;
-            gap: 40px; /* Reduce gap on mobile */
-            flex-wrap: wrap; /* Allow links to wrap on smaller screens */
-            justify-content: center; /* Center links on mobile */
-        }
-        .links-below-text a {
-            font-size: 1.2em;
-            font-weight: bold;
-            text-decoration: none;
-            color: #FF00AA; /* Changed to bright pink */
-        }
+  <link rel="icon" href="https://cdn.glitch.global/6264d154-a535-43f1-a7e2-e5000f1b5f43/logomini.png?v=1741361058034">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mapping homes</title>
+  <style>
+    @font-face {
+      font-family: HK Grotesk;
+      src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+        format("opentype");
+    }
+    @font-face {
+      font-family: HK Grotesk;
+      font-weight: bold;
+      src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+        format("opentype");
+    }
 
-        /* Media Queries for Mobile Devices */
-        @media (max-width: 768px) {
-            .left-section h1 {
-                font-size: 2em; /* Smaller font size for mobile */
-                margin-bottom: 10px; /* Adjusted for mobile */
-            }
-            .materialities-link {
-                font-size: 2em; /* Smaller font size for mobile */
-            }
-            .manifesto-point {
-                flex-direction: column; /* Stack number and text vertically */
-                align-items: flex-start; /* Align text to the left */
-            }
-            .manifesto-point .number {
-                margin-bottom: 10px; /* Add space between number and text */
-            }
-            .links-below-text {
-                gap: 10px; /* Reduce gap further on smaller screens */
-            }
-        }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'HK Grotesk', sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 20px;
+      overflow: hidden;
+      position: relative;
+    }
 
-        /* Media Queries for Desktop */
-        @media (min-width: 769px) {
-            .container {
-                flex-direction: row; /* Side-by-side layout for desktop */
-            }
-            .left-section, .right-section {
-                width: 50%; /* Half width for desktop */
-            }
-        }
-    </style>
+    .container {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: 5.5em;
+      font-weight: bold;
+      color: #004be3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-family: 'HK Grotesk', sans-serif;
+    }
+
+    .title-text span {
+      color: inherit; /* default color */
+    }
+
+    /* Customize letter colors here */
+    .title-text span:nth-child(1)  { color: bluescience; }
+    .title-text span:nth-child(2)  { color: bluescience; }
+    .title-text span:nth-child(3)  { color: bluescience; }
+    .title-text span:nth-child(4)  { color: bluescience; }
+    .title-text span:nth-child(5)  { color: bluescience; }
+    .title-text span:nth-child(6)  { color: bluescience; }
+    .title-text span:nth-child(7)  { color: bluescience; }
+    .title-text span:nth-child(8)  { color: bluescience; }  /* space */
+    .title-text span:nth-child(9)  { color: bluescience; }
+    .title-text span:nth-child(10) { color: bluescience; }
+    .title-text span:nth-child(11) { color: bluescience; }
+    .title-text span:nth-child(12) { color: bluescience; }
+    .title-text span:nth-child(13) { color: bluescience; }
+
+    .icon {
+      width: 200px;
+      height: 200px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      position: relative;
+    }
+
+    .icon:hover {
+      transform: scale(1.3);
+    }
+
+    .icon:hover::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 0, 170, 0.5);
+      mix-blend-mode: multiply;
+    }
+
+    .maps-icon {
+      margin-top: -60px;
+    }
+
+    .mapping-link {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #fb9041;
+      text-decoration: none;
+      font-family: 'HK Grotesk', sans-serif;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title, .mapping-link {
+        font-size: 3em;
+        gap: 10px;
+      }
+      .icon {
+        width: 150px;
+        height: 150px;
+      }
+      .maps-icon {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .title, .mapping-link {
+        font-size: 2em;
+        gap: 5px;
+      }
+      .icon {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .sparkle {
+      position: absolute;
+      font-size: 1.5rem;
+      color: #FF00AA;
+      pointer-events: none;
+      user-select: none;
+      animation: fadeUp 3s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.5);
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="left-section">
-            <h1>✏ ✏ ✏<br>a manifesto<br>on provisional mapping methods</h1>
-            <div class="slideshow-container">
-                <img class="slide" src="https://cdn.glitch.global/38a05706-351a-403c-ba17-fe7a07c1860b/masseycite.png?v=1741262947074" alt="Slide 1">
-                <img class="slide" src="https://cdn.glitch.global/38a05706-351a-403c-ba17-fe7a07c1860b/Slide.png?v=1741267891486" alt="Slide 2">
-                <img class="slide" src="https://cdn.glitch.global/38a05706-351a-403c-ba17-fe7a07c1860b/Slide%205.png?v=1741348511368" alt="Slide 3">
-            </div>
-            
-        </div>
+  <div class="container">
+    <h1 class="title">
+      <a href="https://andreaplarivas.glitch.me/">
+        <img src="https://cdn.glitch.global/6264d154-a535-43f1-a7e2-e5000f1b5f43/profile.png?v=1741100733028" alt="Profile" class="icon">
+      </a>
+      <span class="title-text">
+        <span>m</span><span>a</span><span>p</span><span>p</span><span>i</span><span>n</span><span>g</span><span> </span><span>h</span><span>o</span><span>m</span><span>e</span><span>s</span>
+      </span>
+      <a href="https://manifesto-mapping-homes-methods.glitch.me/" target="_blank">
+        <img src="https://cdn.glitch.global/6264d154-a535-43f1-a7e2-e5000f1b5f43/pencilr.png?v=1741081708205" alt="Method" class="icon">
+      </a>
+    </h1>
+    <a href="https://kinopio.club/the-sketchbook-practice-xVBQM1oYj8bLwrK9L523H">
+      <img src="https://cdn.glitch.global/6264d154-a535-43f1-a7e2-e5000f1b5f43/SKETCHBOOK.png?v=1748506571778" alt="" class="icon"></a>
+  </div>
 
-        <div class="right-section">
-            <div class="links-below-text">
-                <a href="https://drawing-greetings.glitch.me/">Hello Page</a>
-                <a href="https://phd-research-mapping-homes.glitch.me/">PhD Research</a>
-                <a href="https://andreaplarivas.glitch.me/">Academic CV</a>
-                <a href="https://kinopio.club/home-mapping-4MV2cL3QJJ4hEIwSAglzK" target="_blank">Mapping</a>
-
-            </div>
-            <div class="manifesto-point">
-                <div class="number">1</div>
-                <div class="text">This methodology is conceived as processual rather than definitive or outcome-driven. Map-making is approached not as a means to produce final, authoritative representations, but as an open-ended practice—each map a sketch within an evolving analytical process.</div>
-            </div>
-            <div class="manifesto-point">
-                <div class="number">2</div>
-                <div class="text">Rooted in repetition and variation, the methodology mirrors the rhythms of the everyday (Lefebvre 1988, Pink et al. 2017). Spatial representations are not treated as stable, knowable, or transparent, but rather as fluid, uncertain, and subject to transformation. In this context, incompleteness is embraced not as a flaw but as a site of potential (Corner 1999).</div>
-            </div>
-            <div class="manifesto-point">
-                <div class="number">3</div>
-                <div class="text">Form and aesthetics are regarded as equally significant to content. Maps are conceptualised not merely as representational artefacts but also as relational and analytical instruments. Material choices—such as "hand-drawing with crayons, pens, and inks on paper"—emphasise the human, situated nature of knowledge production and foreground the subjective, provisional qualities inherent to the mapping process (Rekacewicz 2021, Westerveld and Knowles 2020). In line with these principles, maps will initially be produced using analogue materials and subsequently digitalised for further analysis and presentation.</div>
-            </div>
-            <div class="manifesto-point">
-                <div class="number">4</div>
-                <div class="text">In line with a decolonial and relational understanding of knowledge, mapping is approached as a human, situated, and affective practice. Drawing on thinkers such as Glissant (1989), this methodology values opacity, emotion, creativity, and the everyday as integral components of knowledge. Maps, therefore, must also account for elements that lie beyond normative and disciplinary frameworks—those that resist clarity, linearity, or control. </div>
-            </div>
-            <div class="manifesto-point">
-                <div class="number">5</div>
-                <div class="text">The visual arrangement and juxtaposition of multiple maps will serve not only to convey findings but also to provoke new interpretations. By assembling diverse mappings together, the intention is to "reformulate what already exists" (Corner 1999, 90), thereby opening further possibilities for engaging with the layered and complex nature of domestic spaces. The display thus becomes an extension of the analytical process, foregrounding plurality, fluidity, and spatial imagination; the basis for potentialities.</div>
-            </div>
-          <a href="https://kinopio.club/undercartographies-materialities-4DkXLEThM-ClHKOx1DV7X" target="_blank" class="materialities-link">materialities</a>
-        </div>
-    </div>
-    <script>
-        let slideIndex = 0;
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none"; // Hide all slides
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1} // Reset to the first slide
-            slides[slideIndex - 1].style.display = "block"; // Show the current slide
-            setTimeout(showSlides, 4000); // Change slide every 4 seconds (4000 milliseconds)
-        }
-        showSlides(); // Start the slideshow
-    </script>
+  <script>
+    const symbols = ['✐', '⊹', '࣪', '˖','⊹','࣪','˖'];
+    document.addEventListener('mousemove', (e) => {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = `${e.pageX}px`;
+      sparkle.style.top = `${e.pageY}px`;
+      sparkle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+      document.body.appendChild(sparkle);
+      setTimeout(() => {
+        sparkle.remove();
+      }, 1400);
+    });
+  </script>
 </body>
 </html>
